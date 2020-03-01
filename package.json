@@ -18,5 +18,6 @@
   "homepage": "https://github.com/gideonbot/gideon-api#readme",
   "dependencies": {
     "node-fetch": "^2.6.0"
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
