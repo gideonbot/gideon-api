@@ -19,5 +19,5 @@
   "dependencies": {
     "node-fetch": "^2.6.0"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": { "registry": "https://registry.npmjs.org/" }
 }
