@@ -19,5 +19,6 @@
   "dependencies": {
     "node-fetch": "^2.6.0"
   },
-  "publishConfig": { "registry": "https://registry.npmjs.org/" }
+  "publishConfig": { "registry": "https://registry.npmjs.org/" },
+  "keywords": ["Arrowverse", "DC", "Gideon", "The Flash", "Arrow", "Supergirl", "DC's Legends of Tomorrow", "Batwoman"]
 }
