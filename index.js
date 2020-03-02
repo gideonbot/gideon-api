@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const gapi = 'https://gideonbot.co.vu/api/';
 
-async function quote() {
+module.exports.quote = async () => {
     try {
         const tbody = await fetch(gapi + 'quotes').then(res => res.json());
         let rt = tbody.sections[0].content;
@@ -34,7 +34,7 @@ async function quote() {
     }
 }
     
-async function abilities(type) {
+module.exports.abilities = async (type) => {
     try {
         const body = await fetch(gapi + 'abilities').then(res => res.json());
         if (type === 'speedster') return body.speedsters;
@@ -48,7 +48,7 @@ async function abilities(type) {
     }
 }
 
-async function soundtracks(show) {
+module.exports.soundtracks = async (show) => {
     try {
         const body = await fetch(gapi + 'soundtracks').then(res => res.json());
         if (show === 'flash') return body.flash;
@@ -64,7 +64,7 @@ async function soundtracks(show) {
     }
 }
 
-async function speedsters() {
+module.exports.speedsters = async () => {
     try {
         const body = await fetch(gapi + 'speedsters').then(res => res.json());
         return body;
@@ -74,8 +74,3 @@ async function speedsters() {
         console.log("An error occurred while trying to fetch speedsters: " + ex);
     }
 }
-
-module.exports = quote;
-module.exports = abilities;
-module.exports = soundtracks;
-module.exports = speedsters;
