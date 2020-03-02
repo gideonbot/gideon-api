@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const gapi = 'https://gideonbot.co.vu/api/';
 
-module.exports.quote = async () => {
+async function quote() {
     try {
         const tbody = await fetch(gapi + 'quotes').then(res => res.json());
         let rt = tbody.sections[0].content;
@@ -33,8 +33,8 @@ module.exports.quote = async () => {
         console.log("An error occurred while trying to fetch a quote: " + ex);
     }
 }
-
-module.exports.abilities = async (type) => {
+    
+async function abilities(type) {
     try {
         const body = await fetch(gapi + 'abilities').then(res => res.json());
         if (type === 'speedster') return body.speedsters;
@@ -48,7 +48,7 @@ module.exports.abilities = async (type) => {
     }
 }
 
-module.exports.soundtracks = async (show) => {
+async function soundtracks(show) {
     try {
         const body = await fetch(gapi + 'soundtracks').then(res => res.json());
         if (show === 'flash') return body.flash;
@@ -64,7 +64,7 @@ module.exports.soundtracks = async (show) => {
     }
 }
 
-module.exports.speedsters = async () => {
+async function speedsters() {
     try {
         const body = await fetch(gapi + 'speedsters').then(res => res.json());
         return body;
@@ -74,3 +74,8 @@ module.exports.speedsters = async () => {
         console.log("An error occurred while trying to fetch speedsters: " + ex);
     }
 }
+
+module.exports = quote;
+module.exports = abilities;
+module.exports = soundtracks;
+module.exports = speedsters;
