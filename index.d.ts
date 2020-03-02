@@ -4,7 +4,8 @@ export function soundtracks(show: string): Promise<SoundtrackInfo>;
 export function speedsters(): Promise<SpeedsterInfo>;
 
 interface QuoteString {
-    quote: string;
+    text: string;
+    img: string;
 }
 
 interface AbilityInfo {

@@ -1,6 +1,6 @@
 {
   "name": "gideon-api",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Node API Wrapper for Gideon API™",
   "main": "index.js",
   "scripts": {

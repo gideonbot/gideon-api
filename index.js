@@ -25,8 +25,13 @@ module.exports.quote = async () => {
     
         let qp = qbody.sections[0].title;
         let qpe = qp.replace(/(?:\/Quotes)/,'');
+
+        const quote = {
+            text: `${chosenQuote}\n\n~${qpe}`,
+            img: type.thumbnail
+        }
     
-        return `**${chosenQuote}\n\n~${qpe}**`;
+        return quote;
     }
 
     catch (ex) {
