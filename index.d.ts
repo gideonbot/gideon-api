@@ -2,6 +2,7 @@ export function quote(): Promise<QuoteString>;
 export function abilities(type: string): Promise<AbilityInfo>;
 export function soundtracks(show: string): Promise<SoundtrackInfo>;
 export function speedsters(): Promise<SpeedsterInfo>;
+export function avi(): Promise<AviInfo>;
 
 interface QuoteString {
     text: string;
@@ -24,4 +25,12 @@ interface SpeedsterInfo {
     actoractress: string;
     firstAppearanceAsSpeedster: string;
     image: string;
+}
+
+interface AviInfo {
+    air_date: string;
+    episode_id: string;
+    episode_name: string;
+    row_number: string;
+    series: string;
 }
