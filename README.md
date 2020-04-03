@@ -61,11 +61,11 @@ const soundtracks = await gideonapi.soundtracks();
 console.log(soundtracks);
 
 /* Example response
-{
-    text: 'I told you when we first met, it was to teach all of you a lesson. Because I see everything and I saw two people, with two broken hearts.\n' +
-        '\n' +
-        '~Music Meister (Arrowverse: Earth-38)',
-    img: 'https://vignette.wikia.nocookie.net/marvel_dc/images/0/08/Music_Meister_Arrow_Earth-38_002.jpg/revision/latest/window-crop/width/200/x-offset/14/y-offset/0/window-width/786/window-height/785?cb=20190929051823'
+flash: {
+    season1: "https://open.spotify.com/album/0xiJwfDcZRQ77bsbjS9TF5",
+    season2: "https://open.spotify.com/album/2EE7W74Rk1LDHzbYC9js2Z",
+    season3: "https://open.spotify.com/album/0DCUAyJVmG1fNxkBaZqFLt",
+    season4: "https://open.spotify.com/album/12WS02J0JBAVeEGj6aJ7R8",
 }
 */
 
