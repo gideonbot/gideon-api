@@ -82,6 +82,20 @@ console.log(speedsters);
     firstAppearanceAsSpeedster: "The Flash 4x20 \"Therefore She Is\""
 }
 */
+
+//fetch from arrowverse.info:
+const episodes = await gideonapi.avi();
+console.log(episodes);
+
+/* Example response
+{
+    "air_date": "February 12, 2019",
+    "episode_id": "S05E14",
+    "episode_name": "Cause and XS",
+    "row_number": 455,
+    "series": "The Flash"
+}
+*/
 ```
 ## License
 

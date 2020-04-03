@@ -79,3 +79,15 @@ module.exports.speedsters = async () => {
         console.log("An error occurred while trying to fetch speedsters: " + ex);
     }
 }
+
+module.exports.avi = async () => {
+    try {
+        const body = await fetch('https://arrowverse.info/api').then(res => res.json());
+        const shows = body.filter(x => x.series !== 'Vixen' && x.series !== 'Freedom Fighters: The Ray');
+        return shows;
+    }
+
+    catch (ex) {
+        console.log("An error occurred while trying to fetch ffrom arrowverse.info: " + ex);
+    }
+}
