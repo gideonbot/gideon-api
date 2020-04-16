@@ -72,6 +72,18 @@ module.exports.soundtracks = async (show) => {
 module.exports.speedsters = async () => {
     try {
         const body = await fetch(gapi + 'speedsters').then(res => res.json());
+        let rt = body[Math.floor(Math.random() * body.length)];
+        return rt;
+    }
+
+    catch (ex) {
+        console.log("An error occurred while trying to fetch a timeline change: " + ex);
+    }
+}
+
+module.exports.timeline = async () => {
+    try {
+        const body = await fetch(gapi + 'timeline').then(res => res.json());
         return body;
     }
 

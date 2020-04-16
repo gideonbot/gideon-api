@@ -83,6 +83,14 @@ console.log(speedsters);
 }
 */
 
+//fetch a timeline change:
+const timeline = await gideonapi.timeline();
+console.log(timeline);
+
+/* Example response
+"Your interference with the timeline has caused World Peace, good job!"
+*/
+
 //fetch from arrowverse.info:
 const episodes = await gideonapi.avi();
 console.log(episodes);
