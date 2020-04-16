@@ -72,8 +72,7 @@ module.exports.soundtracks = async (show) => {
 module.exports.speedsters = async () => {
     try {
         const body = await fetch(gapi + 'speedsters').then(res => res.json());
-        let rt = body[Math.floor(Math.random() * body.length)];
-        return rt;
+        return body;
     }
 
     catch (ex) {
@@ -84,7 +83,8 @@ module.exports.speedsters = async () => {
 module.exports.timeline = async () => {
     try {
         const body = await fetch(gapi + 'timeline').then(res => res.json());
-        return body;
+        let rt = body[Math.floor(Math.random() * body.length)];
+        return rt;
     }
 
     catch (ex) {
