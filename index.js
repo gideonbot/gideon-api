@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const gapi = 'https://gideonbot.co.vu/api/';
+const gapi = 'https://gideonbot.com/api/';
 
 module.exports.quote = async () => {
     try {
