@@ -1,6 +1,6 @@
 export function quote(): Promise<QuoteString>;
-export function abilities(type?: string): Promise<AbilityInfo | AbilityInfo[]>;
-export function soundtracks(show?: string): Promise<SoundtrackInfo | SoundtrackInfo[]>;
+export function abilities(type?: string): Promise<AbilityInfo>;
+export function soundtracks(show?: string): Promise<SoundtrackInfo>;
 export function speedsters(): Promise<SpeedsterInfo>;
 export function timeline(): Promise<String>;
 export function avi(): Promise<AviInfo[]>;
