@@ -1,9 +1,9 @@
 export function quote(): Promise<QuoteString>;
-export function abilities(type: string): Promise<AbilityInfo>;
-export function soundtracks(show: string): Promise<SoundtrackInfo>;
+export function abilities(type?: string): Promise<AbilityInfo | AbilityInfo[]>;
+export function soundtracks(show?: string): Promise<SoundtrackInfo | SoundtrackInfo[]>;
 export function speedsters(): Promise<SpeedsterInfo>;
 export function timeline(): Promise<String>;
-export function avi(): Promise<AviInfo>;
+export function avi(): Promise<AviInfo[]>;
 
 interface QuoteString {
     text: string;
@@ -11,12 +11,15 @@ interface QuoteString {
 }
 
 interface AbilityInfo {
-    title: string;
-    ability: string;
+    [key: string]: {
+        [key: string]: string;
+    }
 }
 
 interface SoundtrackInfo {
-    url: string;
+    [key: string]: {
+        [key: string]: string;
+    }
 }
 
 interface SpeedsterInfo {
