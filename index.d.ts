@@ -1,13 +1,14 @@
-export function quote(): Promise<QuoteString>;
+export function quote(): Promise<Quote>;
 export function abilities(type?: string): Promise<AbilityInfo>;
 export function soundtracks(show?: string): Promise<SoundtrackInfo>;
 export function speedsters(): Promise<SpeedsterInfo>;
 export function timeline(): Promise<String>;
 export function avi(): Promise<AviInfo[]>;
 
-interface QuoteString {
-    text: string;
-    img: string;
+interface Quote {
+    quote: string;
+    quotee: string;
+    image: string;
 }
 
 interface AbilityInfo {

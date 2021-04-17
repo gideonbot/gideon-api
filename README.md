@@ -25,12 +25,11 @@ const quote = await gideonapi.quote();
 console.log(quote);
 
 /* Example response
-{
-  text: 'I told you when we first met, it was to teach all of you a lesson. Because I see everything and I saw two people, with two broken hearts.\n' +
-    '\n' +
-    '~Music Meister (Arrowverse: Earth-38)',
-  img: 'https://vignette.wikia.nocookie.net/marvel_dc/images/0/08/Music_Meister_Arrow_Earth-38_002.jpg/revision/latest/window-crop/width/200/x-offset/14/y-offset/0/window-width/786/window-height/785?cb=20190929051823'
-}
+  {
+    "quote": "You saved the world, and then I saved you, with your pod. You're not the only bad-ass in the family.",
+    "quotee": "Alexandra Danvers (Arrowverse: Earth-38)",
+    "image": "https://static.wikia.nocookie.net/marvel_dc/images/5/5f/Alexandra_Danvers_Arrow_Earth-38_002.jpg/revision/latest/scale-to-width-down/350?cb=20190804030154"
+  },
 */
 
 //fetch metahuman abilities:
